@@ -11,7 +11,7 @@ import org.jetbrains.compose.web.dom.*
 fun WorksSection() {
     SectionContainer {
         H2 {
-            Text("Works")
+            Text("成果物")
         }
 
         Div(
@@ -90,7 +90,7 @@ private fun WorkCard(
 }
 
 @Composable
-private fun SectionContainer(
+fun SectionContainer(
     content: @Composable () -> Unit
 ) {
     Div(
