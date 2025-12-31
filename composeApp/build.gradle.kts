@@ -17,7 +17,11 @@ kotlin {
     }
     
     js {
-        browser()
+        browser{
+            commonWebpackConfig {
+                outputFileName = "composeApp.js"
+            }
+        }
         binaries.executable()
     }
     
@@ -28,6 +32,11 @@ kotlin {
     }
     
     sourceSets {
+        val jsMain by getting {
+            dependencies {
+                implementation(compose.web.core)
+            }
+        }
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
