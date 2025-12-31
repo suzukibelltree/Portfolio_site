@@ -7,6 +7,7 @@ import org.jetbrains.compose.web.css.FlexWrap
 import org.jetbrains.compose.web.css.JustifyContent
 import org.jetbrains.compose.web.css.backgroundColor
 import org.jetbrains.compose.web.css.borderRadius
+import org.jetbrains.compose.web.css.color
 import org.jetbrains.compose.web.css.display
 import org.jetbrains.compose.web.css.flexWrap
 import org.jetbrains.compose.web.css.fontSize
@@ -57,8 +58,9 @@ fun StackGroup(
                     attrs = {
                         style {
                             padding(8.px, 12.px)
-                            backgroundColor(Color("#F3F4F6"))
-                            borderRadius(8.px)
+                            backgroundColor(Color("#E8F5E9")) // 薄い緑
+                            color(Color("#2E7D32"))          // 濃い緑
+                            borderRadius(999.px)
                             fontSize(14.px)
                         }
                     }
