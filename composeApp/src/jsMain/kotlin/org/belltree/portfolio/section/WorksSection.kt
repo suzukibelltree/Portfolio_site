@@ -2,6 +2,8 @@ package org.belltree.portfolio.section
 
 import androidx.compose.runtime.Composable
 import org.belltree.portfolio.WorksStyles
+import org.jetbrains.compose.web.attributes.ATarget
+import org.jetbrains.compose.web.attributes.target
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 
@@ -25,11 +27,15 @@ fun WorksSection() {
         ) {
             WorkCard(
                 title = "ReadTrack",
-                description = "読書量を可視化する読書管理Androidアプリ"
+                description = "積読解消Androidアプリ",
+                url = "https://github.com/suzukibelltree/ReadTrack",
+                imagePath = "readtrack.png"
             )
             WorkCard(
-                title = "RecipeGenerator",
-                description = "レシピAPIを用いた献立生成アプリ（チーム開発）"
+                title = "PomodoroShare",
+                description = "ポモドーロタイマーを離れた人と共有できるAndroidアプリ",
+                url = "https://github.com/suzukibelltree/PomodoroShareApp",
+                imagePath = "pomodoroshare.png"
             )
         }
     }
@@ -38,28 +44,47 @@ fun WorksSection() {
 @Composable
 private fun WorkCard(
     title: String,
-    description: String
+    description: String,
+    url: String,
+    imagePath: String
 ) {
-    Div(
+    A(
+        href = url,
         attrs = {
-            classes(WorksStyles.card)
-        }
-    )
-    {
-        H3 {
-            Text(title)
-        }
-
-        P(
-            attrs = {
-                style {
-                    marginTop(8.px)
-                    color(Color.gray)
-                    lineHeight(1.6.em)
-                }
+            target(ATarget.Blank)
+            style {
+                textDecoration("none")
+                color(Color.blue)
             }
-        ) {
-            Text(description)
+        }
+    ) {
+        Div(
+            attrs = {
+                classes(WorksStyles.card)
+            }
+        )
+        {
+            Img(
+                src = imagePath,
+                attrs = {
+                    classes(WorksStyles.thumbnail)
+                }
+            )
+            H3 {
+                Text(title)
+            }
+
+            P(
+                attrs = {
+                    style {
+                        marginTop(8.px)
+                        color(Color.gray)
+                        lineHeight(1.6.em)
+                    }
+                }
+            ) {
+                Text(description)
+            }
         }
     }
 }
