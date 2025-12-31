@@ -16,10 +16,13 @@ kotlin {
         }
     }
     
-    js {
+    js(IR) {
         browser{
             commonWebpackConfig {
                 outputFileName = "composeApp.js"
+                cssSupport {
+                    enabled.set(true)
+                }
             }
         }
         binaries.executable()
