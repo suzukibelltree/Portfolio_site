@@ -1,12 +1,14 @@
 package org.belltree.portfolio
 
 import androidx.compose.runtime.Composable
-import org.jetbrains.compose.web.dom.*
+import org.belltree.portfolio.section.ProfileSection
+import org.belltree.portfolio.section.WorksSection
+import org.jetbrains.compose.web.css.Style
 
 @Composable
 fun App() {
-    Div {
-        Text("My Portfolio")
-    }
+    Style(WorksStyles)
+    ProfileSection()
+    WorksSection()
 }
 
