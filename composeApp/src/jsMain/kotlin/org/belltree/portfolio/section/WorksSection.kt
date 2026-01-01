@@ -29,13 +29,13 @@ fun WorksSection() {
                 title = "ReadTrack",
                 description = "積読解消Androidアプリ",
                 url = "https://github.com/suzukibelltree/ReadTrack",
-                imagePath = "readtrack.png"
+                imagePath = "images/readtrack.png"
             )
             WorkCard(
                 title = "PomodoroShare",
                 description = "ポモドーロタイマーを離れた人と共有できるAndroidアプリ",
                 url = "https://github.com/suzukibelltree/PomodoroShareApp",
-                imagePath = "pomodoroshare.png"
+                imagePath = "images/pomodoroshare.png"
             )
         }
     }
