@@ -12,6 +12,7 @@ import org.jetbrains.compose.web.dom.Footer
 @Composable
 fun App() {
     Style(WorksStyles)
+    Style(SocialLinkStyles)
     Header()
     ProfileSection()
     SocialLinksSection()

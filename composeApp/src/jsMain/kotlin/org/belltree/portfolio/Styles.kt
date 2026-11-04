@@ -30,3 +30,17 @@ object WorksStyles : StyleSheet() {
         property("object-fit", "cover")
     }
 }
+
+object SocialLinkStyles : StyleSheet() {
+
+    val anchor by style {
+        fontSize(16.px)
+        color(Color("#1f6feb"))
+        textDecoration("none")
+        fontWeight("500")
+
+        self + hover style {
+            textDecoration("underline")
+        }
+    }
+}
