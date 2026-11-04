@@ -2,6 +2,24 @@ package org.belltree.portfolio
 
 import org.jetbrains.compose.web.css.*
 
+object GlobalStyles : StyleSheet() {
+    init {
+        "body" style {
+            margin(0.px)
+            fontFamily(
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Hiragino Sans",
+                "Hiragino Kaku Gothic ProN",
+                "Noto Sans JP",
+                "Yu Gothic",
+                "Meiryo",
+                "sans-serif"
+            )
+        }
+    }
+}
+
 object WorksStyles : StyleSheet() {
 
     val card by style {
@@ -28,5 +46,19 @@ object WorksStyles : StyleSheet() {
         borderRadius(8.px)
         marginBottom(12.px)
         property("object-fit", "cover")
+    }
+}
+
+object SocialLinkStyles : StyleSheet() {
+
+    val anchor by style {
+        fontSize(16.px)
+        color(Color("#1f6feb"))
+        textDecoration("none")
+        fontWeight("500")
+
+        self + hover style {
+            textDecoration("underline")
+        }
     }
 }

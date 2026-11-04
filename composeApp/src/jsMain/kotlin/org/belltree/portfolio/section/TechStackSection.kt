@@ -6,7 +6,6 @@ import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.backgroundColor
 import org.jetbrains.compose.web.css.color
 import org.jetbrains.compose.web.css.marginBottom
-import org.jetbrains.compose.web.css.padding
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H2
@@ -17,7 +16,7 @@ fun TechStackSection() {
     Div(
         attrs = {
             style {
-                padding(56.px, 24.px)
+                // 余白は SectionContainer 側の padding に任せる
                 backgroundColor(Color("#FAFAFA"))
             }
         }

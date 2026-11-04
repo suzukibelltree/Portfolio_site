@@ -12,6 +12,7 @@ fun Header() {
         attrs = {
             style {
                 width(100.percent)
+                property("box-sizing", "border-box") // padding込みで100%に収める
                 backgroundColor(Color("#FAFAFA"))
                 paddingTop(32.px)
                 paddingBottom(32.px)
