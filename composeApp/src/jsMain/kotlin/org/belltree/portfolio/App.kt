@@ -11,6 +11,7 @@ import org.jetbrains.compose.web.css.Style
 
 @Composable
 fun App() {
+    Style(GlobalStyles)
     Style(WorksStyles)
     Style(SocialLinkStyles)
     Header()

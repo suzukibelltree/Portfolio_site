@@ -2,6 +2,23 @@ package org.belltree.portfolio
 
 import org.jetbrains.compose.web.css.*
 
+object GlobalStyles : StyleSheet() {
+    init {
+        "body" style {
+            fontFamily(
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Hiragino Sans",
+                "Hiragino Kaku Gothic ProN",
+                "Noto Sans JP",
+                "Yu Gothic",
+                "Meiryo",
+                "sans-serif"
+            )
+        }
+    }
+}
+
 object WorksStyles : StyleSheet() {
 
     val card by style {
