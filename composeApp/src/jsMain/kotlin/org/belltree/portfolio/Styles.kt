@@ -5,6 +5,7 @@ import org.jetbrains.compose.web.css.*
 object GlobalStyles : StyleSheet() {
     init {
         "body" style {
+            margin(0.px)
             fontFamily(
                 "-apple-system",
                 "BlinkMacSystemFont",
